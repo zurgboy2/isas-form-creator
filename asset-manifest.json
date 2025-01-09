@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/isa-form-creator/static/css/main.82fbc4ec.css",
-    "main.js": "/isa-form-creator/static/js/main.05468809.js",
-    "index.html": "/isa-form-creator/index.html",
-    "main.82fbc4ec.css.map": "/isa-form-creator/static/css/main.82fbc4ec.css.map",
-    "main.05468809.js.map": "/isa-form-creator/static/js/main.05468809.js.map"
+    "main.css": "/isas-form-creator/static/css/main.82fbc4ec.css",
+    "main.js": "/isas-form-creator/static/js/main.05468809.js",
+    "index.html": "/isas-form-creator/index.html",
+    "main.82fbc4ec.css.map": "/isas-form-creator/static/css/main.82fbc4ec.css.map",
+    "main.05468809.js.map": "/isas-form-creator/static/js/main.05468809.js.map"
   },
   "entrypoints": [
     "static/css/main.82fbc4ec.css",
