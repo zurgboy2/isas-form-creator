@@ -1,0 +1,55 @@
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #2d2d2d;
+    --accent-color: #6366f1;
+    --accent-hover: #818cf8;
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --border-color: #404040;
+    --input-bg: #333333;
+    --danger-color: #ef4444;
+    --success-color: #22c55e;
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+  }
+  
+  .App {
+    text-align: left;
+    padding: 20px;
+  }
+
+  .email-settings {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .email-required-setting {
+    margin-bottom: 15px;
+  }
+  
+  .domain-input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .domain-input-group input {
+    flex: 1;
+  }
+  
+  .domain-input-group span {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  small {
+    display: block;
+    color: #666;
+    margin-top: 5px;
+  }

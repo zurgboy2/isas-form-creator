@@ -1,0 +1,124 @@
+/* Animation for new elements */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section-builder,
+  .question-builder {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+  }
+  
+  /* Required Field Indicator */
+  .required-field::after {
+    content: "*";
+    color: var(--danger-color);
+    margin-left: 4px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .app-container {
+      flex-direction: column;
+    }
+    
+    .preview-container {
+      position: static;
+      height: auto;
+      margin-top: 24px;
+    }
+    
+    .builder-container {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 12px;
+    }
+    
+    .preview-container {
+      padding: 16px;
+    }
+    
+    .preview-section {
+      padding: 16px;
+    }
+    
+    .preview-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .preview-section h3 {
+      font-size: 1.2rem;
+    }
+    
+    .form-builder {
+      padding: 10px;
+    }
+    
+    .metadata-section,
+    .theme-section,
+    .section-builder,
+    .question-builder {
+      padding: 16px;
+    }
+    
+    button {
+      width: 100%;
+      margin: 8px 0;
+    }
+  }
+  
+  /* Helper Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-1 { margin-top: 0.25rem; }
+  .mt-2 { margin-top: 0.5rem; }
+  .mt-3 { margin-top: 0.75rem; }
+  .mt-4 { margin-top: 1rem; }
+  
+  .mb-1 { margin-bottom: 0.25rem; }
+  .mb-2 { margin-bottom: 0.5rem; }
+  .mb-3 { margin-bottom: 0.75rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }

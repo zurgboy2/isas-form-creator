@@ -1,0 +1,47 @@
+{
+    "id": "",
+    "type": "text | number | select | radio | checkbox | file | date | likert",
+    "question": "",
+    "description": "",
+    "required": false,
+    "options": [
+      {
+        "label": "",
+        "value": ""
+      }
+    ],
+    "likertOptions": {
+      "scale": [
+        {
+          "value": 1,
+          "label": "Strongly Disagree"
+        },
+        {
+          "value": 2,
+          "label": "Disagree"
+        },
+        {
+          "value": 3,
+          "label": "Neutral"
+        },
+        {
+          "value": 4,
+          "label": "Agree"
+        },
+        {
+          "value": 5,
+          "label": "Strongly Agree"
+        }
+      ],
+      "statements": [
+        {
+          "id": "",
+          "text": ""
+        }
+      ]
+    },
+    "showWhen": {
+      "questionId": "",
+      "equals": ""
+    }
+  }

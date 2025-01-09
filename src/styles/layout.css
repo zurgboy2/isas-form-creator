@@ -1,0 +1,32 @@
+.app-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .builder-container {
+    flex: 1;
+    max-width: 800px;
+  }
+  
+  .preview-container {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .form-builder {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+

@@ -1,0 +1,750 @@
+/* Headers */
+h1, h2, h3 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+  }
+  /* Form Elements */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    margin: 8px;
+  }
+
+  input[type="color"] {
+    width: 100px;
+    height: 40px;
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.theme-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.theme-section input {
+    margin-bottom: 12px;
+}
+
+.theme-color-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.color-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.color-input label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.color-input input[type="color"] {
+  width: 100%;
+  height: 40px;
+  padding: 2px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+}
+
+.import-section {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.import-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.import-input {
+  padding: 12px;
+  background-color: var(--input-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.import-input:hover {
+  border-color: var(--accent-color);
+}
+
+.import-success {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--success-color);
+  color: var(--success-color);
+  border-radius: 6px;
+}
+
+.metadata-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+}
+
+.metadata-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+}
+
+.clear-button {
+  padding: 12px 24px;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background-color: #dc2626; /* Darker red on hover */
+  transform: translateY(-1px);
+}
+
+/* Update the import-button styles to match */
+.import-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.import-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.import-button input[type="file"] {
+  display: none;
+}
+
+/* Fix Form Builder input margins */
+.form-builder {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.metadata-section input,
+.metadata-section textarea,
+.theme-section input,
+.section-builder input,
+.section-builder textarea,
+.question-builder input,
+.question-builder textarea,
+.question-builder select {
+  width: calc(100% - 24px); /* Account for padding */
+  margin: 8px 0;
+  padding: 12px;
+}
+
+/* Ensure consistent container padding */
+.metadata-section,
+.theme-section,
+.section-builder,
+.question-builder {
+  padding: 24px;
+  margin: 0 0 24px 0;
+}
+
+.auth-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-dialog {
+  background: var(--secondary-bg);
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-dialog h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.auth-buttons button {
+  flex: 1;
+}
+
+.auth-dialog input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;  /* Let's make this more explicit */
+  padding-left: 12px; /* Ensure left padding is explicitly set */
+  padding-right: 12px; /* Ensure right padding is explicitly set */
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  box-sizing: border-box; /* Add this to ensure padding doesn't affect width */
+}
+
+.auth-dialog input::placeholder {
+  color: var(--text-secondary);
+}
+
+.auth-buttons button {
+  height: 40px; /* Match input height */
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-buttons button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.fetch-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.fetch-button:hover {
+  background-color: #45a049;
+}
+
+/* Common button styles */
+.import-button,
+.fetch-button,
+.clear-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  height: 44px;  /* Fixed height for all buttons */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+/* Specific colors for each button */
+.import-button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.import-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.fetch-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.fetch-button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+.clear-button {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.clear-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Update the metadata controls container to better align buttons */
+.form-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.forms-dialog {
+  background: var(--secondary-bg);
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-item {
+  padding: 16px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-item:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.form-item h3 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+}
+
+.form-item p {
+  margin: 0 0 12px 0;
+  color: var(--text-secondary);
+}
+
+.form-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.no-forms {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 24px;
+}
+
+.email-content-settings {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.email-message-section,
+.landing-page-content {
+  margin: 20px 0;
+}
+
+.email-content-settings h3 {
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.email-content-settings label {
+  display: block;
+  margin: 15px 0 8px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.email-content-settings textarea {
+  box-sizing: border-box; /* This fixes the padding issue */
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  margin: 8px 0 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.email-content-settings textarea:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.guest-settings {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.guest-settings h3 {
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.guest-settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.max-guests-section,
+.host-settings-section {
+  margin: 15px 0;
+}
+
+.max-guests-section label,
+.host-settings-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.host-approval-setting {
+  margin: 15px 0;
+}
+
+.host-approval-setting label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.host-approval-setting input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.host-email-section {
+  margin-top: 15px;
+}
+
+.host-email-section input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.host-email-section small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.metadata-section,
+.email-content-settings,
+.guest-settings {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* This ensures input boxes have consistent margins */
+.metadata-section input,
+.metadata-section textarea,
+.email-content-settings input,
+.email-content-settings textarea,
+.guest-settings input,
+.guest-settings textarea {
+  width: calc(100% - 24px); /* This leaves room for padding */
+  margin: 8px 12px 8px 0; /* Right margin of 12px */
+  box-sizing: border-box; /* This ensures padding is included in width calculation */
+}
+
+/* Special handling for checkbox to maintain its natural size */
+input[type="checkbox"] {
+  width: auto !important;
+  margin: 0 8px 0 0 !important;
+}
+
+.author-info {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 500;
+}
+
+.required {
+  color: #ff4444;
+  margin-left: 4px;
+}
+
+.invalid {
+  border-color: #ff4444;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.appearance-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.background-image-setting,
+.logo-setting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.background-image-setting input,
+.logo-setting input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.background-image-setting small,
+.logo-setting small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.preview-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.preview-logo img {
+  max-width: 200px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.help-text {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 4px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.8em;
+  margin-top: 4px;
+}
+
+.invalid {
+  border-color: #d32f2f;
+}
+
+
+.action-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.action-panel-right {
+  display: flex;
+  align-items: center;
+}
+
+.action-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-group button {
+  padding: 0.75rem 1.25rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.action-group .primary-button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.action-group .clear-button {
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.toast-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 15px 20px;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease-in;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.toast-message.error {
+  background-color: #ff4444;
+  color: white;
+}
+
+.toast-message.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

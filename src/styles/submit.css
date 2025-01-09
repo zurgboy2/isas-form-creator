@@ -1,0 +1,49 @@
+.submit-section {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-form-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .submit-form-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  
+  .submit-form-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .submit-error {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    border-radius: 6px;
+  }
+  
+  .submit-success {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+    border-radius: 6px;
+  }

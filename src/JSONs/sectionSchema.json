@@ -1,0 +1,12 @@
+{
+    "id": "",
+    "title": "",
+    "description": "",
+    "isVisible": true,
+    "showWhen": {
+      "questionId": "",
+      "equals": ""
+    },
+    "questions": []
+  }
+  

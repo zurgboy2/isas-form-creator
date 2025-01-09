@@ -1,0 +1,25 @@
+{
+    "formTemplate": {
+      "id": "",
+      "version": "1.0",
+      "metadata": {
+        "title": "",
+        "author": "",
+        "description": "",
+        "theme": {
+          "primaryColor": "#000000",
+          "secondaryColor": "#000000",
+          "fontFamily": "",
+          "logo": {
+            "url": "",
+            "allowedTypes": ["image/jpeg", "image/png"]
+          },
+          "backgroundImage": {
+            "url": "",
+            "allowedTypes": ["image/jpeg", "image/png"]
+          }
+        }
+      },
+      "sections": []
+    }
+  }
